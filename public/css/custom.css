@@ -1,0 +1,4 @@
+/* Add here all your CSS customizations */
+#more1, #more2, #more3 {display: none;}
+#myBtn1, #myBtn2, #myBtn3 {cursor: pointer;}
+.nav-foot {list-style: circle !important;}

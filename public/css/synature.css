@@ -1,0 +1,41 @@
+@keyframes tt {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#h1n {
+    stroke-dasharray: 297;
+    stroke-dashoffset: 297;
+    animation: tt 4s linear alternate infinite;
+}
+
+#h2n {
+    stroke-dasharray: 95;
+    stroke-dashoffset: 95;
+    animation: tt 4s linear alternate infinite;
+}
+
+#h3n {
+    stroke-dasharray: 76;
+    stroke-dashoffset: 76;
+    animation: tt 4s linear alternate infinite;
+}
+
+#h4n {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    animation: tt 4s linear alternate infinite;
+}
+
+#h5n {
+    stroke-dasharray: 70;
+    stroke-dashoffset: 70;
+    animation: tt 4s linear alternate infinite;
+}
+
+#h6n {
+    stroke-dasharray: 77;
+    stroke-dashoffset: 77;
+    animation: tt 4s linear alternate infinite;
+}
