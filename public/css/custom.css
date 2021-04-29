@@ -1,4 +1,28 @@
 /* Add here all your CSS customizations */
-#more1, #more2, #more3 {display: none;}
-#myBtn1, #myBtn2, #myBtn3 {cursor: pointer;}
-.nav-foot {list-style: circle !important;}
+#more1,
+#more2,
+#more3 {
+    display: none;
+}
+#myBtn1,
+#myBtn2,
+#myBtn3 {
+    cursor: pointer;
+}
+.nav-foot {
+    list-style: circle !important;
+}
+.nav-login {
+    flex-wrap: revert !important;
+    color: #ccc !important;
+    font-size: 15px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+}
+
+/* .fa,
+.fas {
+    display: none;
+} */

@@ -26,9 +26,9 @@
 
     <title>Cabinet Dentaire | Centre Dentaire Largou Tiznit</title>
 
-    <meta name="keywords" content="HTML5 Template" />
-    <meta name="description" content="Porto - Responsive HTML5 Template">
-    <meta name="author" content="okler.net">
+    <meta name="keywords" content="Cabinet Dentaire" />
+    <meta name="description" content="Centre Dentaire Largou Tiznit">
+    <meta name="author" content="dentaire.net">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
@@ -49,14 +49,16 @@
     <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
 
+    <!-- Bootstrap css datepicker and timepicker -->
+    <link rel="stylesheet" href="vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="vendor/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+
     <!-- Theme CSS -->
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/synature.css">
     <link rel="stylesheet" href="css/theme-elements.css">
     <link rel="stylesheet" href="css/theme-blog.css">
     <link rel="stylesheet" href="css/theme-shop.css">
-
-
 
     <!-- Demo CSS -->
     <link rel="stylesheet" href="css/demos/demo-medical-2.css">
@@ -125,13 +127,12 @@
                 </div>
             </div>
         </nav> --}}
-
     {{-- <main class="py-4"> --}}
     @yield('content')
     {{-- </main> --}}
     {{-- </div> --}}
 
-       <!-- Vendor -->
+    <!-- Vendor -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/jquery.appear/jquery.appear.min.js"></script>
     <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
@@ -148,11 +149,18 @@
     <script src="vendor/vide/jquery.vide.min.js"></script>
     <script src="vendor/vivus/vivus.min.js"></script>
 
+    <!-- Bootstrap js datepicker and timepicker -->
+    <script src="vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="vendor/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+
     <!-- Theme Base, Components and Settings -->
     <script src="js/theme.js"></script>
 
-	<!-- Current Page Vendor and Views -->
-	<script src="js/views/view.contact.js"></script>
+    <!-- Current Page Vendor and Views -->
+    <script src="js/views/view.contact.js"></script>
+
+    <!-- Demo -->
+    <script src="js/demos/demo-auto-services.js"></script>
 
     <!-- Theme Custom -->
     <script src="js/custom.js"></script>

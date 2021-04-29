@@ -48,79 +48,51 @@
                                                         class="d-flex align-items-center justify-content-center h-100 w-100 btn-primary font-weight-normal text-decoration-none">PRENDRE
                                                         RENDEZ-VOUS</a>
                                                 </span> --}}
-
-                                                <span
-                                                    {{-- class="header-top-button-make-as-appoitment d-inline-flex align-items-center justify-content-center h-100 p-0 align-top">
-                                                    <a href="#"
-                                                        class="d-flex align-items-center justify-content-center h-100 w-100 btn-primary font-weight-normal text-decoration-none">PRENDRE
-                                                        RENDEZ-VOUS</a> --}}
-
-                                                    {{-- <!-- Right Side Of Navbar --> --}}
-                                                    <ul class="navbar-nav ml-auto">
-                                                        <!-- Authentication Links -->
-                                                        @guest
-                                                            @if (Route::has('login'))
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link"
-                                                                        href="{{ route('login') }}">{{ __('Login') }}</a>
-                                                                </li>
-                                                            @endif
-
-                                                            @if (Route::has('register'))
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link"
-                                                                        href="{{ route('register') }}">{{ __('Register') }}</a>
-                                                                </li>
-                                                            @endif
-                                                        @else
-                                                            <li class="nav-item dropdown">
-                                                                <a id="navbarDropdown" class="nav-link dropdown-toggle"
-                                                                    href="#" role="button" data-toggle="dropdown"
-                                                                    aria-haspopup="true" aria-expanded="false" v-pre>
-                                                                    {{ Auth::user()->name }}
-                                                                </a>
-
-                                                                <div class="dropdown-menu dropdown-menu-right"
-                                                                    aria-labelledby="navbarDropdown">
-                                                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                                                        onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
-                                                                        {{ __('Logout') }}
-                                                                    </a>
-
-                                                                    <form id="logout-form" action="{{ route('logout') }}"
-                                                                        method="POST" class="d-none">
-                                                                        @csrf
-                                                                    </form>
-                                                                </div>
-                                                            </li>
-                                                        @endguest
-                                                    </ul>
-                                                </span>
-
-                                                {{-- <span
-                                                    class="header-top-button-make-as-appoitment d-inline-flex align-items-center justify-content-center h-100 p-0 align-top">
-                                                    @if (Route::has('login'))
-                                                        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                                                            @auth
-                                                                <a href="{{ url('/home') }}"
-                                                                    class="d-flex align-items-center justify-content-center h-100 w-100 btn-primary font-weight-normal text-decoration-none">Home</a>
-                                                            @else
-                                                                <a href="{{ route('login') }}"
-                                                                    class="d-flex align-items-center justify-content-center h-100 w-100 btn-primary font-weight-normal text-decoration-none">Log
-                                                                    in</a>
-
-                                                                @if (Route::has('register'))
-                                                                    <a href="{{ route('register') }}"
-                                                                        class="d-flex align-items-center justify-content-center h-100 w-100 btn-primary font-weight-normal text-decoration-none">Register</a>
-                                                                @endif
-                                                            @endauth
-                                                        </div>
-                                                    @endif
-                                                </span> --}}
                                             </li>
                                         </ul>
                                     </nav>
+                                    <ul class="nav-login nav nav-pills" id="mainNav"
+                                        style="display: -webkit-inline-box;">
+                                        <!-- Authentication Links -->
+                                        @guest
+                                            @if (Route::has('login'))
+                                                <li class="dropdown-secondary">
+                                                    <a class="nav-link" href="{{ route('login') }}">
+                                                        <i class="far fa-user"></i>
+                                                        {{ __('Login') }}
+                                                    </a>
+                                                </li>
+                                            @endif
+
+                                            @if (Route::has('register'))
+                                                <li class="dropdown-secondary">
+                                                    <a class="nav-link"
+                                                        href="{{ route('register') }}">{{ __('Register') }}</a>
+                                                </li>
+                                            @endif
+                                        @else
+                                            <li class="dropdown-secondary">
+                                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#"
+                                                    role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false" v-pre>
+                                                    {{ Auth::user()->name }}
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right"
+                                                    aria-labelledby="navbarDropdown">
+                                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                                        onclick="event.preventDefault();
+                                                                                                                         document.getElementById('logout-form').submit();">
+                                                        {{ __('Logout') }}
+                                                    </a>
+
+                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                        class="d-none">
+                                                        @csrf
+                                                    </form>
+                                                </div>
+                                            </li>
+                                        @endguest
+                                    </ul>
                                 </div>
                             </div>
                         </div>
