@@ -17,7 +17,7 @@ try {
     $return = $req->execute();
 
     if ($return) {
-        $mes = "not error";
+        $mes = "Votre message a été envoyé avec succès.";
 ?>
         <!DOCTYPE html>
         <html lang="en">
@@ -26,23 +26,103 @@ try {
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
+            <style>
+                .alert {
+                    padding: 20px;
+                    background-color: #d4edda;
+                    color: #155724;
+                    opacity: 1;
+                    transition: opacity 0.6s;
+                    margin-bottom: 15px;
+                    font-family: "Poppins", sans-serif;
+                    border-color: #c3e6cb;
+                    margin-left: -8px;
+                    margin-right: -8px;
+                }
+
+                .alert.success {
+                    background-color: #d4edda;
+                }
+            </style>
+            <script>
+                var cnt = 0;
+
+                function hide_message() {
+
+                    if (cnt == 6) {
+                        document.getElementById("meg").outerHTML = "";
+                    }
+                    cnt++;
+                    setTimeout(hide_message, 2000);
+                }
+            </script>
         </head>
 
-        <body>
-            <h1><?php echo $mes; ?></h1>
+        <body id="meg" onload="hide_message()">
+            <div class="alert success">
+                <strong>Succès!</strong> <?php echo $mes ?>
+            </div>
         </body>
 
         </html>
     <?php
     } else {
-        $mes = "error";
+        $mes = "Une erreur s'est produite lors de l'envoi de votre rendez-vous.";
+    ?>
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                .alert {
+                    padding: 20px;
+                    background-color: #f44336;
+                    color: #731D25;
+                    opacity: 1;
+                    transition: opacity 0.6s;
+                    margin-bottom: 15px;
+                    font-family: "Poppins", sans-serif;
+                    border-color: #F5C6CB;
+                    margin-left: -8px;
+                    margin-right: -8px;
+                }
+
+                .alert.warning {
+                    background-color: #F8D7DA;
+                }
+            </style>
+
+            <script>
+                var cnt = 0;
+
+                function hide_message() {
+
+                    if (cnt == 6) {
+                        document.getElementById("meg").outerHTML = "";
+                    }
+                    cnt++;
+                    setTimeout(hide_message, 2000);
+                }
+            </script>
+        </head>
+
+        <body onload="hide_message()" id="meg">
+            <div class="alert warning">
+                <strong>Erreur!</strong> <?php echo $mes ?>
+            </div>
+        </body>
+
+        </html>
+    <?php
+
     }
     ?>
 <?php
 } catch (Exception $e) {
 ?>
-
     <!DOCTYPE html>
     <html lang="en">
 
@@ -50,12 +130,43 @@ try {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <style>
+            .alert {
+                padding: 20px;
+                background-color: #f44336;
+                color: #731D25;
+                opacity: 1;
+                transition: opacity 0.6s;
+                margin-bottom: 15px;
+                font-family: "Poppins", sans-serif;
+                border-color: #F5C6CB;
+                margin-left: -8px;
+                margin-right: -8px;
+            }
+
+            .alert.warning {
+                background-color: #F8D7DA;
+            }
+        </style>
+
+        <script>
+            var cnt = 0;
+
+            function hide_message() {
+
+                if (cnt == 6) {
+                    document.getElementById("meg").outerHTML = "";
+                }
+                cnt++;
+                setTimeout(hide_message, 2000);
+            }
+        </script>
     </head>
 
-    <body>
-        <h1><?php echo $e . ' ' . $mes; ?></h1>
-
+    <body onload="hide_message()" id="meg">
+        <div class="alert warning">
+            <strong>Erreur!</strong> <?php echo $mes . ' Erreur de ' . $e ?>
+        </div>
     </body>
 
     </html>

@@ -31,11 +31,11 @@
                         <form class="contact-form custom-form-style-1" action="php/rendez_vous.php" target="contact"
                             method="POST">
                             <div class="contact-form-success alert alert-success d-none mt-4">
-                                <strong>Success!</strong> Your appointment has been sent to us.
+                                <strong>Success!</strong> Votre rendez-vous nous a été envoyé.
                             </div>
 
                             <div class="contact-form-error alert alert-danger d-none mt-4">
-                                <strong>Error!</strong> There was an error sending your appointment.
+                                <strong>Error!</strong> Une erreur s'est produite lors de l'envoi de votre rendez-vous.
                                 <span class="mail-error-message text-1 d-block"></span>
                             </div>
 
