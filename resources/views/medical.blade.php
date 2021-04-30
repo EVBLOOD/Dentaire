@@ -1,4 +1,3 @@
-{{-- @extends('layout') --}}
 @extends('layouts.app')
 
 @section('content')
@@ -31,10 +30,10 @@
                                             class="text-color-default font-weight-normal text-4-5 line-height-2 mb-4 appear-animation"
                                             data-appear-animation="fadeInUpShorter" data-appear-animation-delay="750"
                                             data-plugin-options="{'minWindowWidth': 0}"></h2>
-                                        <a href="#about-us"
+                                        <a href="{{ '/rendez-vous' }}"
                                             class="btn btn-primary btn-modern font-weight-semibold text-3 btn-py-3 px-5 appear-animation"
                                             data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1000"
-                                            data-plugin-options="{'minWindowWidth': 0}">Commencer</a>
+                                            data-plugin-options="{'minWindowWidth': 0}">PRENDRE RENDEZ-VOUS</a>
                                     </div>
                                 </div>
                             </div>
@@ -59,10 +58,10 @@
                                             class="text-color-default font-weight-normal text-4-5 line-height-2 mb-4 appear-animation"
                                             data-appear-animation="fadeInUpShorter" data-appear-animation-delay="750"
                                             data-plugin-options="{'minWindowWidth': 0}"></h2>
-                                        <a href="#about-us"
+                                        <a href="{{ '/rendez-vous' }}"
                                             class="btn btn-primary btn-modern font-weight-semibold text-3 btn-py-3 px-5 appear-animation"
                                             data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1000"
-                                            data-plugin-options="{'minWindowWidth': 0}">Commencer</a>
+                                            data-plugin-options="{'minWindowWidth': 0}">PRENDRE RENDEZ-VOUS</a>
                                     </div>
                                 </div>
                             </div>
@@ -409,7 +408,7 @@
                             <h3 class="text-color-quaternary mb-4 text-color-light d-block text-center font-weight-semibold text-capitalize appear-animation"
                                 data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">Améliorez-vous
                                 maintenant! Prenez simplement rendez-vous</h3>
-                            <a href="demo-medical-2-contact-us.html"
+                            <a href="{{ '/rendez-vous' }}"
                                 class="btn btn-outline btn-light bg-hover-light text-hover-dark text-color-light border-color-light text-uppercase rounded-0 px-5 py-3 mb-2 appear-animation"
                                 data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">PRENDRE
                                 RENDEZ-VOUS</a>

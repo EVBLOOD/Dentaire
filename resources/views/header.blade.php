@@ -29,25 +29,20 @@
                                                 <span class="header-top-socials p-0 h-100">
                                                     <ul class="d-flex align-items-center h-100 p-0">
                                                         <li class="list-unstyled">
-                                                            <a href="#"><i
+                                                            <a href="https://www.instagram.com" target="_blank"><i
                                                                     class="fab fa-instagram text-color-quaternary text-hover-primary"></i></a>
                                                         </li>
                                                         <li class="list-unstyled">
-                                                            <a href="#"><i
+                                                            <a href="https://www.facebook.com/centrelargou/"
+                                                                target="_blank"><i
                                                                     class="fab fa-facebook-f text-color-quaternary text-hover-primary"></i></a>
                                                         </li>
                                                         <li class="list-unstyled">
-                                                            <a href="#"><i
+                                                            <a href="https://www.twitter.com" target="_blank"><i
                                                                     class="fab fa-twitter text-color-quaternary text-hover-primary"></i></a>
                                                         </li>
                                                     </ul>
                                                 </span>
-                                                {{-- <span
-                                                    class="header-top-button-make-as-appoitment d-inline-flex align-items-center justify-content-center h-100 p-0 align-top">
-                                                    <a href="#"
-                                                        class="d-flex align-items-center justify-content-center h-100 w-100 btn-primary font-weight-normal text-decoration-none">PRENDRE
-                                                        RENDEZ-VOUS</a>
-                                                </span> --}}
                                             </li>
                                         </ul>
                                     </nav>
@@ -56,18 +51,20 @@
                                         <!-- Authentication Links -->
                                         @guest
                                             @if (Route::has('login'))
-                                                <li class="dropdown-secondary">
-                                                    <a class="nav-link" href="{{ route('login') }}">
-                                                        <i class="far fa-user"></i>
-                                                        {{ __('Login') }}
+                                                <li class="dropdown-secondary" style="width: max-content;">
+                                                    <a class=" nav-link" href="{{ route('login') }}">
+                                                        <img src="img/icons/login.png" alt="login">
+                                                        {{ __('Se connecter') }}
                                                     </a>
                                                 </li>
                                             @endif
 
                                             @if (Route::has('register'))
                                                 <li class="dropdown-secondary">
-                                                    <a class="nav-link"
-                                                        href="{{ route('register') }}">{{ __('Register') }}</a>
+                                                    <a class="nav-link" href="{{ route('register') }}">
+                                                        <img src="img/icons/register.png" alt="register">
+                                                        {{ __('S’inscrire') }}
+                                                    </a>
                                                 </li>
                                             @endif
                                         @else
@@ -77,12 +74,14 @@
                                                     aria-expanded="false" v-pre>
                                                     {{ Auth::user()->name }}
                                                 </a>
-                                                <div class="dropdown-menu dropdown-menu-right"
+                                                <div class="dropdown-menu dropdown-menu-left"
                                                     aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                                        onclick="event.preventDefault();
-                                                                                                                         document.getElementById('logout-form').submit();">
-                                                        {{ __('Logout') }}
+                                                    <a class="dropdown-item" href="{{ route('home') }}">
+                                                        {{ __('Liste Rendez-Vous') }}
+                                                    </a>
+                                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                                        {{ __('Déconnecter ') }}
                                                     </a>
 
                                                     <form id="logout-form" action="{{ route('logout') }}" method="POST"
@@ -104,7 +103,7 @@
                             <div class="header-row">
                                 <div class="header-logo">
                                     <a href="{{ '/' }}">
-                                        <img alt="Porto" width="180" height="60" src="img/logos/Logo.png">
+                                        <img alt="Dentaire" width="180" height="60" src="img/logos/Logo.png">
                                     </a>
                                 </div>
                             </div>

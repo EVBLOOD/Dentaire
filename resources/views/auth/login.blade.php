@@ -1,5 +1,4 @@
 @extends('layouts.app')
-{{-- @extends('layout') --}}
 
 @section('content')
 
@@ -13,12 +12,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 align-self-center p-static order-2 text-center">
-                            <h1 class="font-weight-bold text-dark">Login</h1>
+                            <h1 class="font-weight-bold text-dark">Se Connecter</h1>
                         </div>
                         <div class="col-md-12 align-self-center order-1">
                             <ul class="breadcrumb d-block text-center">
-                                <li><a href="#">Home</a></li>
-                                <li class="active">Login</li>
+                                <li><a href="{{ '/' }}">Accueil</a></li>
+                                <li class="active">Se Connecter</li>
                             </ul>
                         </div>
                     </div>
@@ -109,29 +108,31 @@
                             @csrf
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <label for="email" class="text-color-dark text-3">{{ __('E-Mail Address') }}<span
+                                    <label for="email"
+                                        class="text-color-dark text-3">{{ __('Adresse électronique') }}<span
                                             class="text-color-danger">*</span></label>
-                                    <input id="email" type="email" class="form-control form-control-lg text-4"
-                                        class="form-control @error('email') is-invalid @enderror" name="email"
-                                        value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
+                                        name="email" value="{{ old('email') }}" autocomplete="email" autofocus>
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
+                                            {{-- <strong>{{ $message }}</strong> --}}
+                                            <strong>{{ __("Vous avez entré un nom d'utilisateur ou un mot de passe invalide") }}</strong>
                                         </span>
                                     @enderror
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <label for="password" class="text-color-dark text-3">{{ __('Password') }}<span
+                                    <label for="password" class="text-color-dark text-3">{{ __('Mode de passe') }}<span
                                             class="text-color-danger">*</span></label>
-                                    <input id="password" type="password" class="form-control form-control-lg text-4"
+                                    <input id="password" type="password"
                                         class="form-control @error('password') is-invalid @enderror" name="password"
-                                        required autocomplete="current-password">
+                                        autocomplete="current-password">
                                     @error('password')
-                                        <span class="invalid-feedback" role="alert">
+                                        {{-- <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
-                                        </span>
+                                            <strong>{{ __("Vous avez entré un nom d'utilisateur ou un mot de passe invalide") }}</strong>
+                                        </span> --}}
                                     @enderror
                                 </div>
                             </div>
@@ -142,7 +143,7 @@
                                         <input class="custom-control-input" type="checkbox" name="remember" id="remember"
                                             {{ old('remember') ? 'checked' : '' }}>
                                         <label class="custom-control-label cur-pointer text-2" for="remember">
-                                            {{ __('Remember Me') }}</label>
+                                            {{ __('Souviens-toi de moi') }}</label>
                                     </div>
                                 </div>
 
@@ -150,7 +151,7 @@
                                     @if (Route::has('password.request'))
                                         <a class="text-decoration-none text-color-dark text-color-hover-primary font-weight-semibold text-2"
                                             href="{{ route('password.request') }}">
-                                            {{ __('Forgot Your Password?') }}</a>
+                                            {{ __('Mode de passe oublié?') }}</a>
                                     @endif
                                 </div>
                             </div>
@@ -159,15 +160,13 @@
                                     <button type="submit"
                                         class="btn btn-dark btn-modern btn-block text-uppercase rounded-0 font-weight-bold text-3 py-3"
                                         style="background-color: #007bff;border-color: #007bff;"
-                                        data-loading-text="Loading...">{{ __('Login') }}</button>
+                                        data-loading-text="Loading...">{{ __('Se Connecter') }}</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-
             </div>
-
         </div>
 
         @include('footer')

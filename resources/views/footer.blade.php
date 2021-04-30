@@ -3,7 +3,9 @@
             <div class="container">
                 <div class="row py-5">
                     <div class="col-sm-12 pb-4 pb-lg-0 col-lg-2 mb-2 d-flex align-items-center">
-                        <img src="img/logos/Logo_footer.png" alt="Logo Footer">
+                        <a href="{{ '/' }}">
+                            <img src="img/logos/Logo_footer.png" alt="Logo Footer">
+                        </a>
                     </div>
                     <div class="col-sm-6 col-lg-3 footer-column footer-column-get-in-touch">
                         <h4 class="mb-4 text-uppercase">CONTACT</h4>
@@ -33,17 +35,17 @@
                         </div>
                         <ul class="social-icons">
                             <li class="social-icons-instagram">
-                                <a href="#" target="_blank" title="Instagram">
+                                <a href="https://www.instagram.com" target="_blank" title="Instagram">
                                     <i class="fab fa-instagram text-4 font-weight-semibold"></i>
                                 </a>
                             </li>
                             <li class="social-icons-twitter">
-                                <a href="#" target="_blank" title="Twitter">
+                                <a href="https://www.twitter.com" target="_blank" title="Twitter">
                                     <i class="fab fa-twitter text-4 font-weight-semibold"></i>
                                 </a>
                             </li>
                             <li class="social-icons-facebook">
-                                <a href="#" target="_blank" title="Facebook">
+                                <a href="https://www.facebook.com/centrelargou/" target="_blank" title="Facebook">
                                     <i class="fab fa-facebook-f text-4 font-weight-semibold"></i>
                                 </a>
                             </li>

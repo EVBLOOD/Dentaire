@@ -1,4 +1,3 @@
-{{-- @extends('layout') --}}
 @extends('layouts.app')
 
 @section('content')
@@ -19,7 +18,7 @@
                         <div class="col-md-4 order-1 order-md-2 align-self-center">
                             <ul class="breadcrumb d-block text-md-right appear-animation" data-appear-animation="fadeIn"
                                 data-appear-animation-delay="300">
-                                <li><a href="file:///C:/Users/Abdellah/Desktop/Medical/demo-medical-2.html">Accueil</a></li>
+                                <li><a href="{{ '/' }}">Accueil</a></li>
                                 <li class="active">Contact</li>
                             </ul>
                         </div>
