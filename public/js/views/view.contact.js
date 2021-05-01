@@ -1,8 +1,3 @@
-/*
-Name: 			View - Contact
-Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	8.3.0
-*/
 
 (function ($) {
 
@@ -12,20 +7,33 @@ Theme Version:	8.3.0
 	var test = 0;
 	$("#form-submit").click(function d() {
 		if (test == 0) {
-			window.location.href = "contact#te";
+			window.location.href = "contact#block_contact";
 		}
-		// document.getElementsByName("email").values()[0]="";
-		// document.getElementsByName("subject").values()[0]="";
-		// document.getElementsByName("message").values()[0]="";
+
 		if (test == 2) {
 			$("input:text").val("");
 			$("#ema").val("");
 			$("#mes").val("");
-			test=0;
 		}
 		test++;
 		setTimeout(d, 5000);
 	});
+
+	$("#form-rdv").click(function de() {
+		if (test == 0) {
+			window.location.href = "rendez-vous#block_rdv";
+		}
+
+		if (test == 2) {
+			$("input:text").val("");
+			$("#email").val("");
+			$("#phone").val("");
+			$("#reason").val("");
+		}
+		test++;
+		setTimeout(de, 5000);
+	});
+
 	$(".contact-form").validate(function () {
 	});
 

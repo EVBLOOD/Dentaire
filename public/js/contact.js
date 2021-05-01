@@ -8,5 +8,5 @@ function hide_message() {
         document.getElementById("meg").outerHTML = "";
     }
     cnt++;
-    setTimeout(hide_message,2000);
+    setTimeout(hide_message, 2000);
 }

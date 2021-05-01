@@ -60,12 +60,12 @@
                                             @endif
 
                                             @if (Route::has('register'))
-                                                <li class="dropdown-secondary">
+                                                {{-- <li class="dropdown-secondary">
                                                     <a class="nav-link" href="{{ route('register') }}">
                                                         <img src="img/icons/register.png" alt="register">
                                                         {{ __('S’inscrire') }}
                                                     </a>
-                                                </li>
+                                                </li> --}}
                                             @endif
                                         @else
                                             <li class="dropdown-secondary">
@@ -76,10 +76,10 @@
                                                 </a>
                                                 <div class="dropdown-menu dropdown-menu-left"
                                                     aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="{{ route('home') }}">
+                                                    <a class="dropdown-item" style="text-transform: capitalize;" href="{{ route('home') }}">
                                                         {{ __('Liste Rendez-Vous') }}
                                                     </a>
-                                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                    <a class="dropdown-item" style="text-transform: capitalize;" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
                                                         {{ __('Déconnecter ') }}
                                                     </a>

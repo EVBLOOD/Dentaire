@@ -2,9 +2,7 @@
 
 @section('content')
 
-
     <div class="body">
-
         @include('header')
         <div role="main" class="main">
 
@@ -16,7 +14,7 @@
                         </div>
                         <div class="col-md-12 align-self-center order-1">
                             <ul class="breadcrumb d-block text-center">
-                                <li><a href="{{ '/' }}">Accueil</a></li>
+                                <li><a href="{{ '/' }}">{{ __('Accueil') }}</a></li>
                                 <li class="active">Se Connecter</li>
                             </ul>
                         </div>
@@ -109,7 +107,7 @@
                             <div class="form-row">
                                 <div class="form-group col">
                                     <label for="email"
-                                        class="text-color-dark text-3">{{ __('Adresse électronique') }}<span
+                                        class="text-color-dark text-3">{{ __('Adresse électronique ') }}<span
                                             class="text-color-danger">*</span></label>
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
                                         name="email" value="{{ old('email') }}" autocomplete="email" autofocus>
@@ -123,7 +121,7 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <label for="password" class="text-color-dark text-3">{{ __('Mode de passe') }}<span
+                                    <label for="password" class="text-color-dark text-3">{{ __('Mode de passe ') }}<span
                                             class="text-color-danger">*</span></label>
                                     <input id="password" type="password"
                                         class="form-control @error('password') is-invalid @enderror" name="password"
@@ -149,9 +147,9 @@
 
                                 <div class="form-group col-md-auto">
                                     @if (Route::has('password.request'))
-                                        <a class="text-decoration-none text-color-dark text-color-hover-primary font-weight-semibold text-2"
+                                        {{-- <a class="text-decoration-none text-color-dark text-color-hover-primary font-weight-semibold text-2"
                                             href="{{ route('password.request') }}">
-                                            {{ __('Mode de passe oublié?') }}</a>
+                                            {{ __('Mode de passe oublié?') }}</a> --}}
                                     @endif
                                 </div>
                             </div>

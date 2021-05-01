@@ -17,7 +17,7 @@ try {
     $return = $req->execute();
 
     if ($return) {
-        $mes = "Votre message a été envoyé avec succès.";
+        $mes = "Votre rendez-vous nous a été envoyé.";
 ?>
         <!DOCTYPE html>
         <html lang="en">

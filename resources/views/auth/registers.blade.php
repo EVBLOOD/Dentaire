@@ -23,7 +23,7 @@
                 </div>
             </section>
 
-            <div class="container py-4">
+            {{-- <div class="container py-4">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="card">
@@ -106,59 +106,83 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
-
-            {{-- <div class="container py-4">
+            <div class="container py-4">
                 <div class="row justify-content-center">
                     <div class="col-md-6 col-lg-5">
-                        <form action="/" id="frmSignUp" method="post">
+                        <form id="frmSignUp" method="POST" action="{{ route('register') }}">
+                            @csrf
+
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <label class="text-color-dark text-3">Username <span
+                                    <label class="text-color-dark text-3">{{ __('Nom ') }}<span
                                             class="text-color-danger">*</span></label>
-                                    <input type="text" value="" class="form-control form-control-lg text-4" required>
+                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
+                                        name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                                    @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <label class="text-color-dark text-3">E-Mail Address <span
+                                    <label class="text-color-dark text-3">{{ __('Adresse E-mail ') }}<span
                                             class="text-color-danger">*</span></label>
-                                    <input type="text" value="" class="form-control form-control-lg text-4" required>
+                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
+                                        name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <label class="text-color-dark text-3">Password <span
+                                    <label class="text-color-dark text-3">{{ __('Mot de passe ') }} <span
                                             class="text-color-danger">*</span></label>
-                                    <input type="password" value="" class="form-control form-control-lg text-4" required>
+                                    <input id="password" type="password"
+                                        class="form-control @error('password') is-invalid @enderror" name="password"
+                                        required autocomplete="new-password">
+
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <label class="text-color-dark text-3">Confirm Password <span
+                                    <label class="text-color-dark text-3">{{ __('Confirmez le mot de passe ') }}<span
                                             class="text-color-danger">*</span></label>
-                                    <input type="password" value="" class="form-control form-control-lg text-4" required>
+                                    <input id="password-confirm" type="password" class="form-control"
+                                        name="password_confirmation" required autocomplete="new-password">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <p class="text-2 mb-2">Your personal data will be used to support your experience
-                                        throughout this website, to manage access to your account, and for other purposes
-                                        described in our <a href="#" class="text-decoration-none">privacy policy.</a></p>
+                                    <p class="text-2 mb-2">Vos données personnelles seront utilisées pour soutenir votre
+                                        expérience sur ce site Web, pour gérer l'accès à votre compte et à d'autres fins
+                                        décrites dans notre <a href="#" class="text-decoration-none">politique de confidentialité.</a></p>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <button type="submit"
+                                    <button type="submit" style="background-color: #007bff;border-color: #007bff;"
                                         class="btn btn-dark btn-modern btn-block text-uppercase rounded-0 font-weight-bold text-3 py-3"
-                                        data-loading-text="Loading...">Register</button>
+                                        data-loading-text="Loading...">{{ __('Inscription') }}</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-            </div> --}}
+            </div>
         </div>
         @include('footer')
     </div>

@@ -126,11 +126,11 @@ function typeWriter() {
   cnt++;
   setTimeout(typeWriter, 80);
 }
-function click_(id_){
-  document.getElementById("acc").className="nav-link";
-  document.getElementById("spe").className="nav-link";
-  document.getElementById("ser").className="nav-link";
-  document.getElementById("con").className="nav-link";
-  document.getElementById("apr").className="nav-link";
-  document.getElementById(id_).className+=" active";
+function click_(id_) {
+  document.getElementById("acc").className = "nav-link";
+  document.getElementById("spe").className = "nav-link";
+  document.getElementById("ser").className = "nav-link";
+  document.getElementById("con").className = "nav-link";
+  document.getElementById("apr").className = "nav-link";
+  document.getElementById(id_).className += " active";
 }

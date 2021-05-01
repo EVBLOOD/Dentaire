@@ -2,8 +2,6 @@
 
 require '../php/vendor/autoload.php';
 
-// require 'C:\Wnmp\html\Medical\public\php\vendor\autoload.php';
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -27,13 +25,13 @@ try {
     $mailer->Host = 'smtp.gmail.com';
     $mailer->SMTPAuth = true;
     $mailer->Username = 'abde.banouge1@gmail.com';
-   $mailer->Password = 'Abde24*-';
+    $mailer->Password = 'Abde24*-';
     $mailer->SMTPSecure = 'tls';
     $mailer->Port = 587;
 
     if (isset($_POST['sendMailBtn'])) {
-        $fromEmail = 'Largou@dentaire.com';
-        $toEmail = $_POST['email'];
+        $fromEmail = $_POST['email'];
+        $toEmail = 'abde.banouge@gmail.com';
         $subjectName = $_POST['subject'];
         $message = $_POST['message'];
 
@@ -46,13 +44,12 @@ try {
 				<meta name="viewport"
 					  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 				<meta http-equiv="X-UA-Compatible" content="ie=edge">
-				<title>Document</title>
 			</head>
 			<body>
 			<span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">' . $message . '</span>
 				<div class="container">
                  ' . $message . '<br/>
-                    Regards<br/>
+                    CENTRE DENTAIRE LARGOU TIZNIT<br/>
                   ' . $fromEmail . '
 				</div>
 			</body>

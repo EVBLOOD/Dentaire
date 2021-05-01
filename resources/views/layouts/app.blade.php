@@ -53,6 +53,40 @@
 
     <!-- Head Libs -->
     <script src="vendor/modernizr/modernizr.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#specialite").hover(function() {
+                document.getElementById("acc").className = "nav-link";
+                document.getElementById("spe").className = "nav-link active";
+                document.getElementById("ser").className = "nav-link";
+                document.getElementById("apr").className = "nav-link";
+                document.getElementById("con").className = "nav-link";
+            });
+            $("#services").hover(function() {
+                document.getElementById("acc").className = "nav-link";
+                document.getElementById("spe").className = "nav-link";
+                document.getElementById("ser").className = "nav-link active";
+                document.getElementById("apr").className = "nav-link";
+                document.getElementById("con").className = "nav-link";
+            });
+            $("#about-us").hover(function() {
+                document.getElementById("acc").className = "nav-link";
+                document.getElementById("spe").className = "nav-link";
+                document.getElementById("ser").className = "nav-link";
+                document.getElementById("apr").className = "nav-link active";
+                document.getElementById("con").className = "nav-link";
+            });
+            $(".accueil").hover(function() {
+                document.getElementById("acc").className = "nav-link active";
+                document.getElementById("spe").className = "nav-link";
+                document.getElementById("ser").className = "nav-link";
+                document.getElementById("apr").className = "nav-link";
+                document.getElementById("con").className = "nav-link";
+            });
+        });
+
+    </script>
 </head>
 
 <body onLoad=typeWriter()>

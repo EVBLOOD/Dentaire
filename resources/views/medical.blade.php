@@ -12,7 +12,7 @@
                         data-plugin-options="{'responsive': {'0': {'items': 1, 'dots': true, 'nav': false}, '479': {'items': 1, 'dots': true}, '768': {'items': 1, 'dots': true}, '979': {'items': 1}, '1199': {'items': 1}}, 'loop': false, 'autoHeight': false, 'margin': 0, 'dots': true, 'dotsVerticalOffset': '-250px', 'nav': false, 'animateIn': 'fadeIn', 'animateOut': 'fadeOut', 'mouseDrag': false, 'touchDrag': false, 'pullDrag': false, 'autoplay': false, 'autoplayTimeout': 7000, 'autoplayHoverPause': true, 'rewind': true}">
 
                         <!-- Carousel Slide 1 -->
-                        <div class="position-relative overflow-hidden pb-5"
+                        <div class="position-relative overflow-hidden pb-5 accueil"
                             data-dynamic-height="['991px','991px','991px','650px','650px']" style="height: 991px;">
                             <div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0"
                                 data-appear-animation="kenBurnsToLeft" data-appear-animation-duration="30s"
@@ -40,7 +40,7 @@
                         </div>
 
                         <!-- Carousel Slide 2 -->
-                        <div class="position-relative overflow-hidden pb-5"
+                        <div class="position-relative overflow-hidden pb-5 accueil"
                             data-dynamic-height="['991px','991px','991px','650px','650px']" style="height: 991px;">
                             <div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0"
                                 data-appear-animation="kenBurnsToLeft" data-appear-animation-duration="30s"
@@ -75,7 +75,7 @@
                 </div>
             </section>
 
-            <div class="cards custom-cards container z-index-2">
+            <div id="specialite" class="cards custom-cards container z-index-2">
                 <div class="cards-container row justify-content-center justify-content-xl-between w-100 my-5 mt-xl-0 mx-0">
                     <div class="col-xs-12 col-lg-6 col-xl-4 mb-4 mb-xl-0 pb-2 pb-xl-0">
                         <div class="card border-radius-0 bg-color-light border-0 box-shadow-1 appear-animation"
@@ -294,7 +294,7 @@
                 </div>
             </section>
 
-            <section class="medical-services py-5 p-relative overflow-hidden lazyload" data-bg-src="img/specialite_back.jpg"
+            <section id="services" class="medical-services py-5 p-relative overflow-hidden lazyload" data-bg-src="img/specialite_back.jpg"
                 id="service">
                 <div class="container">
                     <div class="row">

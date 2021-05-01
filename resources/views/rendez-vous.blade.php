@@ -18,13 +18,13 @@
                                 <li><a href="{{ '/' }}"
                                         class="text-color-default text-color-hover-primary text-decoration-none">Accueil</a>
                                 </li>
-                                <li class="active">Rendez-vous</li>
+                                <li id="block_rdv" class="active">Rendez-vous</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </section>
-            <div class="container my-5 pt-4 pb-5">
+            <div class="container my-5 pt-4 pb-5" style="margin-top: -3rem!important;">
                 <div class="row">
                     <div class="col">
                         <iframe name="contact" width="100%" height="12%" style="border:0;"></iframe>
@@ -100,7 +100,7 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col mb-0">
-                                    <input type="submit"
+                                    <input type="submit" id="form-rdv"
                                         class="btn btn-primary btn-modern font-weight-bold custom-btn-border-radius custom-btn-arrow-effect-1 text-3 px-5 py-3"
                                         value="ENVOYER">
                                 </div>
