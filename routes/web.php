@@ -25,10 +25,6 @@ Route::get('/rendez-vous', function () {
     return view('rendez-vous');
 });
 
-Route::get('/details-rdv', function () {
-    return view('details-rdv');
-});
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

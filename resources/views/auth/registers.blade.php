@@ -169,7 +169,8 @@
                                 <div class="form-group col">
                                     <p class="text-2 mb-2">Vos données personnelles seront utilisées pour soutenir votre
                                         expérience sur ce site Web, pour gérer l'accès à votre compte et à d'autres fins
-                                        décrites dans notre <a href="#" class="text-decoration-none">politique de confidentialité.</a></p>
+                                        décrites dans notre <a href="#" class="text-decoration-none">politique de
+                                            confidentialité.</a></p>
                                 </div>
                             </div>
                             <div class="form-row">

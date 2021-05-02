@@ -4,7 +4,6 @@
                    <div class="col-12 col-sm-5 col-md-6 text-left" style="margin: 0px;padding: 5px 15px;">
                        <p class="text-primary m-0 font-weight-bold" style="color: #343a40 !important;">Liste Des
                            Rendez-Vous</p>
-                       {{-- </p> <?php print_r($data); ?> <p> --}}
                    </div>
                </div>
            </div>
@@ -27,9 +26,22 @@
                            <tbody class="text-center">
                                <?php
                                $cx = new PDO('mysql:host=localhost;port=3312;dbname=dentaire;charset=utf8', 'root', '');
-                               $return = $cx->query('select nom,prenom,description,time_rdv,email,tel from rdvs');
-                               // $return = $cx->query('select nom,prenom,description,time_rdv,email,tel from rdvs
-                               // where date_rdv=CURDATE()');
+                               $search = '';
+                               if (isset($_GET['sendRdv'])) {
+                               $dt = explode('/', $_GET['firstDate']);
+                               $search = $_GET['Search'];
+                               $date = $dt[2] . '-' . $dt[0] . '-' . $dt[1];
+                               $sql = "select nom,prenom,description,time_rdv,email,tel from rdvs where
+                               DATE(date_rdv)='$date' or (nom + ' ' +prenom) like '%$search%' or (prenom + ' ' +nom)
+                               like '%$search%' or tel = '$search' ORDER BY time_rdv";
+                               } else {
+                               $sql = "select nom,prenom,description,time_rdv,email,tel from rdvs where
+                               date_rdv=CURDATE() where (nom + ' ' +prenom) like '%$search%' and (prenom + ' ' +nom)
+                               like '%$search%' and tel = '$search' ORDER BY time_rdv ORDER BY time_rdv";
+                               }
+
+                               $return = $cx->query($sql);
+
                                $i = 0;
                                while ($tab = $return->fetch()) {
                                $i++;
@@ -51,8 +63,17 @@
                                    <td><?php echo $tab['tel']; ?></td>
                                    <td><?php echo $tab['description']; ?></td>
                                </tr>
+
+
                                <?php }
                                }
+                               if ($i == 0) { ?>
+
+                               <div class="alert alert-danger" role="alert">
+                                   <h4 class="alert-heading">Attention!</h4>
+                                   <p>les informations qui vous cherchez n'existe pas dans la liste de rendez-vous.</p>
+                               </div>
+                               <?php }
                                ?>
                            </tbody>
                        </table>

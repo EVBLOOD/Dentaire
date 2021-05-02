@@ -24,27 +24,20 @@
             <div class="container-fluid">
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <a class="navbar-brand"></a>
-                    {{-- <form target="contact" action="{{ '/contact' }}" class="form-inline" method="GET"> --}}
                     <form class="form-inline" method="GET">
-                        <input type="text" value="" data-msg-required="Veuillez sélectionner une date." maxlength="100"
-                            class="form-control mr-sm-2 custom-datepicker" name="firstDate" id="firstDate" required
-                            placeholder="Date rendez-vous">
-                        <button class="btn btn-outline-primary my-2 my-sm-0" style="border-radius: 10% !important;"
-                            type="submit">Rechercher</button>
+                        <input type="text" value="" class="form-control mr-sm-2" name="Search"
+                            id="Search" placeholder="Nom, Prénom ou Téléphone">
+                        <input type="text" value="" class="form-control mr-sm-2 custom-datepicker" name="firstDate"
+                            id="firstDate" placeholder="Date rendez-vous">
+                        <button onclick="RDV()" name="sendRdv" class="btn btn-outline-primary my-2 my-sm-0" type="submit"
+                            style="border-radius: 10% !important;">Rechercher</button>
                     </form>
                 </nav>
-                {{-- <iframe src="contact" width="100%" height="100%" style="border:0;"></iframe> --}}
 
-                {{-- <?php $data = [
-                'firstDate' => $_GET['firstDate'],
-                ]; ?> --}}
-
-                {{-- @include('details-rdv', $data) --}}
-                
-                @include('details-rdv')
-                
+                <div id="detailsRdv">
+                    @include('details-rdv')
+                </div>
             </div>
-
         </div>
 
         @include('footer')

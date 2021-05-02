@@ -134,3 +134,9 @@ function click_(id_) {
   document.getElementById("apr").className = "nav-link";
   document.getElementById(id_).className += " active";
 }
+
+function RDV() {
+  var content = document.getElementById("detailsRdv").innerHTML;
+  document.getElementById("detailsRdv").innerHTML = "";
+  document.getElementById("detailsRdv").innerHTML = content;
+}
