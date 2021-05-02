@@ -25,8 +25,10 @@
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <a class="navbar-brand"></a>
                     <form class="form-inline" method="GET">
-                        <input type="text" value="" class="form-control mr-sm-2" name="Search"
-                            id="Search" placeholder="Nom, Prénom ou Téléphone">
+                        <input type="tel" value="" class="form-control mr-sm-2" name="phone" id="phone"
+                            placeholder="Téléphone">
+                        <input type="text" value="" class="form-control mr-sm-2" name="nomComplet" id="nomComplet"
+                            placeholder="Nom ou Prénom">
                         <input type="text" value="" class="form-control mr-sm-2 custom-datepicker" name="firstDate"
                             id="firstDate" placeholder="Date rendez-vous">
                         <button onclick="RDV()" name="sendRdv" class="btn btn-outline-primary my-2 my-sm-0" type="submit"

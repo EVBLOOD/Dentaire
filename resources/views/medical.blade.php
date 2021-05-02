@@ -294,8 +294,7 @@
                 </div>
             </section>
 
-            <section id="services" class="medical-services py-5 p-relative overflow-hidden lazyload" data-bg-src="img/specialite_back.jpg"
-                id="service">
+            <section id="services" class="medical-services py-5 p-relative overflow-hidden lazyload" data-bg-src="img/specialite_back.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col pt-4">
