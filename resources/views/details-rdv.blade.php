@@ -13,7 +13,7 @@
 
                        <table class="table table-striped table tablesorter" id="ipi-table">
                            <thead
-                               style="color:white; background-color: #3467ef !important; border-color: #3467ef; !important">
+                               style="color:white; background-color: #3467ef !important; border-color: #3467ef !important">
                                <tr>
                                    <th class="text-center">Nom</th>
                                    <th class="text-center">Prénom</th>
@@ -25,19 +25,23 @@
                            </thead>
                            <tbody class="text-center">
                                <?php
-                               $cx = new PDO('mysql:host=localhost;port=3312;dbname=dentaire;charset=utf8', 'root', '');
-                               $search = '';
+                               $cx = new PDO('mysql:host=localhost;dbname=dentaire0;charset=utf8', 'root', '');
+                               $search = "";
+                               $date="";
                                if (isset($_GET['sendRdv'])) {
                                $dt = explode('/', $_GET['firstDate']);
                                $search = $_GET['Search'];
                                $date = $dt[2] . '-' . $dt[0] . '-' . $dt[1];
                                $sql = "select nom,prenom,description,time_rdv,email,tel from rdvs where
-                               DATE(date_rdv)='$date' or (nom + ' ' +prenom) like '%$search%' or (prenom + ' ' +nom)
-                               like '%$search%' or tel = '$search' ORDER BY time_rdv";
-                               } else {
+                               ((DATE(date_rdv)='$date' or DATE(date_rdv)=CURDATE()) and (nom + ' ' +prenom) like '$search%' and (prenom + ' ' +nom)
+                               like '$search%' and prenom like '$search%' and nom
+                               like '$search%') or (tel = '$search') ORDER BY time_rdv";
+                               }
+                                else {
                                $sql = "select nom,prenom,description,time_rdv,email,tel from rdvs where
-                               date_rdv=CURDATE() where (nom + ' ' +prenom) like '%$search%' and (prenom + ' ' +nom)
-                               like '%$search%' and tel = '$search' ORDER BY time_rdv ORDER BY time_rdv";
+                               (DATE(date_rdv)=CURDATE() and (nom + ' ' +prenom) like '%$search%' and (prenom + ' ' +nom)
+                               like '%$search%' and prenom like '%$search%' and nom
+                               like '%$search%') or (tel = '$search') ORDER BY time_rdv";
                                }
 
                                $return = $cx->query($sql);

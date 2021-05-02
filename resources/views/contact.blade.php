@@ -131,7 +131,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="dropdown-secondary">
-                                                    <a id="ser" class="nav-link" href="{{ '/#service' }}"
+                                                    <a id="ser" class="nav-link" href="{{ '/#services' }}"
                                                         onclick="click_('ser')">
                                                         Service Médical
                                                     </a>

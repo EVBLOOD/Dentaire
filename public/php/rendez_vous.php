@@ -1,6 +1,6 @@
 <?php
 try {
-    $cx = new PDO('mysql:host=localhost;port=3312;dbname=dentaire;charset=utf8', 'root', '');
+    $cx = new PDO('mysql:host=localhost;dbname=dentaire0;charset=utf8', 'root', '');
 
     $req = $cx->prepare('insert into rdvs (nom,prenom,email,tel,date_rdv,time_rdv,description) values(:nom,:prenom,:email,:tel,STR_TO_DATE(:date_rdv, "%m/%d/%Y"),:time_rdv,:description)');
 
