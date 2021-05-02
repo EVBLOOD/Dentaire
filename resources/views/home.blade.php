@@ -35,7 +35,6 @@
                             style="border-radius: 10% !important;">Rechercher</button>
                     </form>
                 </nav>
-
                 <div id="detailsRdv">
                     @include('details-rdv')
                 </div>
