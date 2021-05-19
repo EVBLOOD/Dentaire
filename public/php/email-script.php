@@ -24,8 +24,8 @@ try {
 
     $mailer->Host = 'smtp.gmail.com';
     $mailer->SMTPAuth = true;
-    $mailer->Username = 'abde.banouge1@gmail.com';
-    $mailer->Password = 'Abde24*-';
+    $mailer->Username = 'abdellahelbanouge@gmail.com';
+    $mailer->Password = 'abdellah1995';
     $mailer->SMTPSecure = 'tls';
     $mailer->Port = 587;
 
