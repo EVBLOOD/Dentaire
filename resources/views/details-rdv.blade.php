@@ -34,8 +34,8 @@
 
                                if (isset($_GET['sendRdv'])) {
                                if (str_replace(' ', '', $_GET['firstDate']) != '') {
-                            //    $dt = explode('/', $_GET['firstDate']);
-                            //    $date = $dt[2] . '-' . $dt[1] . '-' . $dt[0];
+                               // $dt = explode('/', $_GET['firstDate']);
+                               // $date = $dt[2] . '-' . $dt[1] . '-' . $dt[0];
                                $date = $_GET['firstDate'];
                                $date = "DATE(date_rdv)='" . $date . "' ";
                                } else {
@@ -59,7 +59,7 @@
                                }
 
                                $sql = 'select nom,prenom,description,time_rdv,email,tel from rdvs where ' . $date . $tel
-                               . $nomComplet;
+                               . $nomComplet . 'ORDER BY time_rdv ASC';
 
                                $return = $cx->query($sql);
 
