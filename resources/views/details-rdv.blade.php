@@ -25,7 +25,6 @@
                            </thead>
                            <tbody class="text-center">
                                <?php
-<<<<<<< HEAD
                                $cx = new PDO('mysql:host=localhost;port=3312;dbname=dentaire;charset=utf8', 'root', '');
                                $nomComplet = '';
                                $tel = '';
@@ -46,33 +45,15 @@
                                $date = 'DATE(date_rdv)=CURDATE() ';
                                $nomComplet = '';
                                $tel = '';
-=======
-                               $cx = new PDO('mysql:host=localhost;dbname=dentaire0;charset=utf8', 'root', '');
-                               $search = "";
-                               $date="";
->>>>>>> 847bd33d4cee973f88a3247368aff74080921673
                                if (isset($_GET['sendRdv'])) {
                             //    $nom = document . getElementById('nomComplet') . value;
                             //    echo $nom;
                                if (str_replace(' ', '', $_GET['firstDate']) != '') {
                                $dt = explode('/', $_GET['firstDate']);
                                $date = $dt[2] . '-' . $dt[0] . '-' . $dt[1];
-<<<<<<< HEAD
                                $date = "DATE(date_rdv)='" . $date . "' ";
                                } else {
                                $date = 'DATE(date_rdv)=CURDATE() ';
-=======
-                               $sql = "select nom,prenom,description,time_rdv,email,tel from rdvs where
-                               ((DATE(date_rdv)='$date' or DATE(date_rdv)=CURDATE()) and (nom + ' ' +prenom) like '$search%' and (prenom + ' ' +nom)
-                               like '$search%' and prenom like '$search%' and nom
-                               like '$search%') or (tel = '$search') ORDER BY time_rdv";
-                               }
-                                else {
-                               $sql = "select nom,prenom,description,time_rdv,email,tel from rdvs where
-                               (DATE(date_rdv)=CURDATE() and (nom + ' ' +prenom) like '%$search%' and (prenom + ' ' +nom)
-                               like '%$search%' and prenom like '%$search%' and nom
-                               like '%$search%') or (tel = '$search') ORDER BY time_rdv";
->>>>>>> 847bd33d4cee973f88a3247368aff74080921673
                                }
 
                                if (str_replace(' ', '', $_GET['phone']) != '') {
