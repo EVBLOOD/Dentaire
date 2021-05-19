@@ -72,8 +72,8 @@
 
                             <div class="form-row mb-3">
                                 <div class="form-group col-md-6 mb-3">
-                                    <input type="text" value="" data-msg-required="Veuillez sélectionner une date."
-                                        maxlength="100" class="form-control custom-datepicker" name="firstDate"
+                                    <input type="date" value="" data-msg-required="Veuillez sélectionner une date."
+                                        maxlength="100" class="form-control" name="firstDate"
                                         id="firstDate" required placeholder="Date rendez-vous">
                                 </div>
                                 <div class="form-group col-md-6 mb-3">

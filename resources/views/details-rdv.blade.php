@@ -28,29 +28,15 @@
                                $cx = new PDO('mysql:host=localhost;port=3312;dbname=dentaire;charset=utf8', 'root', '');
                                $nomComplet = '';
                                $tel = '';
-                               // if (isset($_GET['sendRdv'])) {
-                               // $dt = explode('/', $_GET['firstDate']);
-                               // $nomComplet = $_GET['nomComplet'];
-                               // $tel = $_GET['phone'];
-                               // $date = $dt[2] . '-' . $dt[0] . '-' . $dt[1];
-                               // $sql = "select nom,prenom,description,time_rdv,email,tel from rdvs where
-                               // DATE(date_rdv)='$date' and tel like '$tel' and nom like '%$nomComplet%' or prenom like
-                               // '%$nomComplet%' ORDER BY time_rdv";
-                               // } else {
-                               // $sql = "select nom,prenom,description,time_rdv,email,tel from rdvs where
-                               // DATE(date_rdv)=CURDATE() and tel like '$tel' and nom like '%$nomComplet%' or prenom
-                               // like '%$nomComplet%' ORDER BY time_rdv";
-                               // }
-
                                $date = 'DATE(date_rdv)=CURDATE() ';
                                $nomComplet = '';
                                $tel = '';
+
                                if (isset($_GET['sendRdv'])) {
-                            //    $nom = document . getElementById('nomComplet') . value;
-                            //    echo $nom;
                                if (str_replace(' ', '', $_GET['firstDate']) != '') {
-                               $dt = explode('/', $_GET['firstDate']);
-                               $date = $dt[2] . '-' . $dt[0] . '-' . $dt[1];
+                            //    $dt = explode('/', $_GET['firstDate']);
+                            //    $date = $dt[2] . '-' . $dt[1] . '-' . $dt[0];
+                               $date = $_GET['firstDate'];
                                $date = "DATE(date_rdv)='" . $date . "' ";
                                } else {
                                $date = 'DATE(date_rdv)=CURDATE() ';
@@ -81,6 +67,7 @@
                                while ($tab = $return->fetch()) {
                                $i++;
                                if ($i % 2 == 0) { ?>
+
                                <tr>
                                    <td><?php echo $tab['nom']; ?></td>
                                    <td><?php echo $tab['prenom']; ?></td>

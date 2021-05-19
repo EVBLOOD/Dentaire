@@ -29,7 +29,7 @@
                             placeholder="Téléphone">
                         <input type="text" value="" class="form-control mr-sm-2" name="nomComplet" id="nomComplet"
                             placeholder="Nom ou Prénom">
-                        <input type="text" value="" class="form-control mr-sm-2 custom-datepicker" name="firstDate"
+                        <input type="text" value="" class="form-control mr-sm-2" name="firstDate"
                             id="firstDate" placeholder="Date rendez-vous">
                         <button onclick="RDV()" name="sendRdv" class="btn btn-outline-primary my-2 my-sm-0" type="submit"
                             style="border-radius: 10% !important;">Rechercher</button>
