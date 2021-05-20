@@ -59,7 +59,7 @@
                                }
 
                                $sql = 'select nom,prenom,description,time_rdv,email,tel from rdvs where ' . $date . $tel
-                               . $nomComplet . 'ORDER BY time_rdv ASC';
+                               . $nomComplet . ' ORDER BY time_rdv ASC';
 
                                $return = $cx->query($sql);
 
