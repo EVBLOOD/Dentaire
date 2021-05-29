@@ -16,7 +16,7 @@
 			$("#mes").val("");
 		}
 		test++;
-		setTimeout(d, 5000);
+		setTimeout(d, 2500);
 	});
 
 	$("#form-rdv").click(function de() {
@@ -26,12 +26,13 @@
 
 		if (test == 2) {
 			$("input:text").val("");
+			$("#firstDate").val(this.defaultValue);
 			$("#email").val("");
 			$("#phone").val("");
 			$("#reason").val("");
 		}
 		test++;
-		setTimeout(de, 5000);
+		setTimeout(de, 2500);
 	});
 
 	$(".contact-form").validate(function () {
